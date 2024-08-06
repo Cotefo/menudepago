@@ -20,6 +20,4 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 })
 export class WelcomeComponent   {
 
-
-
 }

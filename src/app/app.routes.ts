@@ -18,7 +18,6 @@ export const routes: Routes = [
                 component:SettingsComponent }
             ]
    },
-
   {
     path: '',
     redirectTo: '/welcome',
@@ -28,6 +27,5 @@ export const routes: Routes = [
     path: '**',
     redirectTo: '/welcome',
     pathMatch: 'full',
-  }
-
+  },
 ];

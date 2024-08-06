@@ -1,54 +1,13 @@
 <div iv class="content">
 
-    <header class="header">
+  <header class="header">
 
-          <img  class="logo" src="../../../assets/resources/logo/simplehc-logo.png"/>
+        <img  class="logo" src="../../../assets/resources/logo/simplehc-logo.png"/>
 
-          <button nz-button routerLink="../welcome" nzType="primary">Atrás</button>
+        <button nz-button routerLink="../welcome" nzType="primary">Atrás</button>
 
-    </header>
+  </header>
 
-        <div class="body">
-
-          <form nz-form class="formulario">
-            <div nz-col [nzXs]="24" class="title-header">
-              <h1>Registro de Usuario</h1>
-            </div>
-            <br>
-
-
-            <nz-form-item>
-              <nz-form-label [nzSpan]="12" nzFor="email">Nombre</nz-form-label>
-                  <nz-form-control [nzSpan]="12">
-                      <input nz-input name="email" type="email" id="email" />
-                  </nz-form-control>
-           </nz-form-item>
-
-               <nz-form-item>
-                <nz-form-label [nzSpan]="12" nzFor="email">Apellido</nz-form-label>
-                  <nz-form-control [nzSpan]="12">
-                      <input nz-input name="email" type="email" id="email" />
-                </nz-form-control>
-              </nz-form-item>
-
-            <nz-form-item>
-              <nz-form-label [nzSpan]="12" nzFor="email">Direccion</nz-form-label>
-                <nz-form-control [nzSpan]="12">
-                    <input nz-input name="email" type="email" id="email" />
-              </nz-form-control>
-            </nz-form-item>
-            <nz-form-item>
-              <nz-form-label [nzSpan]="12" nzFor="email">E-mail</nz-form-label>
-                <nz-form-control [nzSpan]="12">
-                    <input nz-input name="email" type="email" id="email" />
-              </nz-form-control>
-            </nz-form-item>
-            <div  nz-col [nzXs]="24" [nzSm]="24" [nzMd]="24"	[nzLg]="24">
-              <button class="button"  nz-button nzType="primary">Guardar</button>
-            </div>
-
-          </form>
-
-        </div>
+  <router-outlet></router-outlet>
 
 </div>
