@@ -1,0 +1,53 @@
+:host::ng-deep
+{
+
+  .m-button[background='primary']
+  {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color:violet ;
+    color: white;
+        min-width: 7rem;
+        font-size: 0.8rem;
+        padding: 0.45rem;
+        border: 1px;
+  }
+
+  .m-button[background='primary']:hover
+  {
+    background-color:black ;
+
+  }
+
+
+  .m-button[background="secondary"]{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color:red ;
+    color: white;
+    min-width: 7rem;
+    font-size: 0.8rem;
+    padding: 0.45rem;
+    border: 1px;
+}
+
+.m-button[background="warning"]{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color:yellow ;
+    color: black;
+    min-width: 7rem;
+    font-size: 0.8rem;
+    padding: 0.45rem;
+    border: 1px;
+}
+
+.m-button[background="success"]{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color:blue;
+    color: white;
+    min-width: 7rem;
+    font-size: 0.8rem;
+    padding: 0.45rem;
+    border: 1px;
+}
+
+
+}

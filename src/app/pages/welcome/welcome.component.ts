@@ -6,13 +6,14 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { RouterLink } from '@angular/router';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 
 
 @Component({
   selector: 'app-welcome',
   standalone: true,
-  imports:[ NzFormModule,  NzMenuModule, NzCardModule, NzIconModule, RouterLink, NzGridModule, NzLayoutModule
+  imports:[NzButtonModule, NzFormModule,  NzMenuModule, NzCardModule, NzIconModule, RouterLink, NzGridModule, NzLayoutModule
 
   ],
   templateUrl: './welcome.component.html',

@@ -1,42 +1,144 @@
 <div class="body">
 
-    <form nz-form class="formulario">
-      <div nz-col [nzXs]="24" class="title-header">
-        <h1>Registro de Usuario</h1>
-      </div>
-      <br>
+  <form [formGroup]="form" nz-row [nzJustify]="'center'" [nzGutter]="[0,12]" class="formulario">
 
-
-      <nz-form-item>
-        <nz-form-label [nzSpan]="12" nzFor="email">Nombre</nz-form-label>
-            <nz-form-control [nzSpan]="12">
-                <input nz-input name="email" type="email" id="email" />
-            </nz-form-control>
-     </nz-form-item>
-
-         <nz-form-item>
-          <nz-form-label [nzSpan]="12" nzFor="email">Apellido</nz-form-label>
-            <nz-form-control [nzSpan]="12">
-                <input nz-input name="email" type="email" id="email" />
-          </nz-form-control>
-        </nz-form-item>
-
-      <nz-form-item>
-        <nz-form-label [nzSpan]="12" nzFor="email">Direccion</nz-form-label>
-          <nz-form-control [nzSpan]="12">
-              <input nz-input name="email" type="email" id="email" />
-        </nz-form-control>
-      </nz-form-item>
-      <nz-form-item>
-        <nz-form-label [nzSpan]="12" nzFor="email">E-mail</nz-form-label>
-          <nz-form-control [nzSpan]="12">
-              <input nz-input name="email" type="email" id="email" />
-        </nz-form-control>
-      </nz-form-item>
-      <div  nz-col [nzXs]="24" [nzSm]="24" [nzMd]="24"	[nzLg]="24">
-        <button class="button"  nz-button nzType="primary">Guardar</button>
+    <div nz-col [nzXs]="24" class="title-header">
+      <h1 class="text-align-center">Registro de Usuario</h1>
+    </div>
+    <br>
+    <div nz-col [nzXs]="24">
+      <div class="d-flex">
+        <label class="label-w"> Nombre</label>
+        <input [ngClass]="{'invalid-type': form.get('nombre')?.invalid && form.get('nombre')?.dirty}"
+          formControlName="nombre" name="nombre" type="email" id="nombre" class="flex-grow-1" />
       </div>
 
-    </form>
+      <ng-container *ngIf="form.get('nombre')!.errors && form.get('nombre')!.dirty ">
+        <div *ngIf="(form.get('nombre')!.hasError('minLength') )"
+          class="d-flex justify-content-start p-0">
+          <small class="fz-12 ms-3 p-0 txt-red-1">El campo es requerido</small>
+        </div>
+        <div *ngIf="form.get('nombre')!.hasError('minlength')" class="d-flex justify-content-start p-0">
+          <small class="fz-12 ms-3 p-0 txt-red-1">El nombre debe tener al menos 5 caracteres</small>
+        </div>
+        <div *ngIf="form.get('nombre')!.hasError('maxlength')" class="d-flex justify-content-start p-0">
+          <small class="fz-12 ms-3 p-0 txt-red-1">El nombre debe tener menos de 50 caracteres</small>
+        </div>
 
-  </div>
+
+      </ng-container>
+    </div>
+
+    <div nz-col [nzXs]="24">
+      <div class="d-flex">
+
+        <label class="label-w"> Apellido</label>
+        <input [ngClass]="{'invalid-type': form.get('apellido')?.invalid && form.get('apellido')?.dirty}"
+          formControlName="apellido" name="apellido" type="email" id="apellido" class="flex-grow-1" />
+      </div>
+      <ng-container *ngIf="form.get('apellido')!.errors && form.get('apellido')!.dirty ">
+        <div *ngIf="(form.get('apellido')!.hasError('required') && form.get('apellido')!.dirty)"
+          class="d-flex justify-content-start p-0">
+          <small class="fz-12 ms-3 p-0 txt-red-1">El campo es requerido</small>
+        </div>
+        <div *ngIf="form.get('apellido')!.hasError('minlength')" class="d-flex justify-content-start p-0">
+          <small class="fz-12 ms-3 p-0 txt-red-1">El apellido debe tener al menos 3 caracteres</small>
+        </div>
+        <div *ngIf="form.get('apellido')!.hasError('maxlength')" class="d-flex justify-content-start p-0">
+          <small class="fz-12 ms-3 p-0 txt-red-1">El apellido debe tener menos de 50 caracteres</small>
+        </div>
+      </ng-container>
+    </div>
+
+
+
+    <div nz-col [nzXs]="24">
+      <div class="d-flex">
+        <label class="label-w"> Dirección</label>
+        <input [ngClass]="{'invalid-type': form.get('direccion')?.invalid && form.get('direccion')?.dirty}"
+          formControlName="direccion" name="direccion" type="email" id="direccion" class="flex-grow-1" />
+
+      </div>
+      <ng-container *ngIf="form.get('direccion')!.errors && form.get('direccion')!.dirty ">
+        <div *ngIf="(form.get('direccion')!.hasError('required') && form.get('direccion')!.dirty)"
+          class="d-flex justify-content-start p-0">
+          <small class="fz-12 ms-3 p-0 txt-red-1">El campo es requerido</small>
+        </div>
+        <div *ngIf="(form.get('direccion')!.hasError('maxlength') && form.get('direccion')!.dirty)"
+        class="d-flex justify-content-start p-0">
+          <small class="fz-12 ms-3 p-0 txt-red-1">La direccion debe tener menos de 100 caracteres</small>
+      </div>
+      <div *ngIf="(form.get('direccion')!.hasError('minlength') && form.get('direccion')!.dirty)"
+      class="d-flex justify-content-start p-0">
+        <small class="fz-12 ms-3 p-0 txt-red-1">La direccion al menos debe tener 5 caracteres</small>
+    </div>
+      </ng-container>
+
+    </div>
+
+    <div nz-col [nzXs]="24">
+      <div class="d-flex">
+        <label class="label-w ff-bold"> Edad</label>
+        <input [ngClass]="{'invalid-type': form.get('edad')?.invalid && form.get('edad')?.dirty}" formControlName="edad"
+          name="edad" type="text" id="edad" class="flex-grow-1" />
+
+      </div>
+
+      <ng-container *ngIf="form.get('edad')!.errors && form.get('edad')!.dirty ">
+        <div *ngIf="(form.get('edad')!.hasError('required') && form.get('edad')!.dirty)"
+          class="d-flex justify-content-start p-0">
+          <small class="fz-12 ms-3 p-0 txt-red-1">El campo es requerido</small>
+        </div>
+        <div *ngIf="(form.get('edad')!.hasError('pattern') && form.get('edad')!.dirty)"
+          class="d-flex justify-content-start p-0">
+          <small class="fz-12 ms-3 p-0 txt-red-1">El campo debe ser numérico</small>
+        </div>
+        <div *ngIf="(form.get('edad')!.hasError('maxlength') && form.get('edad')!.dirty)"
+        class="d-flex justify-content-start p-0">
+        <small class="fz-12 ms-3 p-0 txt-red-1">La edad debe tener menos de 5 caracteres</small>
+      </div>
+
+      </ng-container>
+
+    </div>
+
+    <div nz-col [nzXs]="24">
+      <div  class="d-flex">
+
+        <label class="label-w"> E-mail</label>
+        <input [ngClass]="{'invalid-type': form.get('correo')?.invalid && form.get('correo')?.dirty}"
+          formControlName="correo" name="email" type="email" id="email" class="flex-grow-1 " />
+
+
+      </div>
+        <ng-container *ngIf="form.get('correo')!.errors && form.get('correo')!.dirty ">
+          <div *ngIf="(form.get('correo')!.hasError('required'))"
+            class="d-flex justify-content-start p-0">
+            <small class="fz-12 ms-3  p-0 txt-red-1">El campo es requerido</small>
+          </div>
+          <div *ngIf="form.get('correo')!.hasError('email')" class="d-flex justify-content-start p-0">
+            <small class="fz-12 ms-3 p-0 txt-red-1">Ingrese un correo electrónico válido</small>
+          </div>
+
+        </ng-container>
+    </div>
+
+
+<!--
+      <button [disabled]="!form.valid" nz-button class="button" nzType="primary"
+        (click)="createBasicMessage()">Guardar</button>
+
+
+-->
+    <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="24" [nzLg]="24" class="divboton">
+
+
+        <app-button  [background]="'primary'" [disable]="!form.valid" (click)="createBasicMessage()">Guardar
+
+      </app-button>
+
+    </div>
+
+  </form>
+
+</div>

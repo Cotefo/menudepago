@@ -1,0 +1,62 @@
+:host::ng-deep{
+
+  .header{
+      width: 100%;
+      height: 4.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0.1875rem 1rem #4260A229; 
+      background-color: var(--white);
+
+      &-logo{
+
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 0.5rem;
+
+          &-img{
+              width: 2.5rem;
+              height: 2.5rem;
+          }
+
+          &-title{
+
+              h3{
+                  font-size: 1.25rem;
+                  line-height: 1.5rem;
+                  color: var(--black1);
+              }
+
+              p{
+                  font-size: 0.625rem;
+                  line-height: 0.625rem;
+                  color: var(--gray3);
+              }
+
+          }
+
+      }
+  }
+
+  .header.animate {
+      top: 0;
+      transform: translateY(-4.125rem);
+      position: relative;
+      animation: animate-header 1s ease 0s 1 normal forwards;
+  }
+
+  @keyframes animate-header {
+      0% {
+        transform: translateY(-4.125rem);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+  }
+
+}

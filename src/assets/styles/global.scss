@@ -1,0 +1,31 @@
+
+@import './utils/grid.scss';
+@import './utils/size.scss';
+@import './utils/fonts.scss';
+@import './utils/colors.scss';
+@import './utils/text.scss';
+@import './utils/spacing/index.scss';
+
+body, *{
+    font-family: var(--fontFamilyRegular);
+}
+
+.ff-normal{
+    font-family: var(--fontFamilyRegular);
+}
+
+.ff-bold, strong, b{
+    font-family: var(--fontFamilyBold);
+}
+
+.ff-light{
+    font-family: var(--fontFamilyLight);
+}
+
+.ff-black{
+    font-family: var(--fontFamilyBlack);
+}
+
+h1,h2,h3,h4,h5,p{
+    margin-bottom: 0;
+}

@@ -1,37 +1,50 @@
 
+<div iv class="content">
+
+  <header class="header">
+
+        <img  class="logo" src="../../../assets/resources/logo/simplehc-logo.png"/>
+
+        <button nz-button routerLink="../admin/paymenthistory">Templates</button>
+
+  </header>
 
 
-    <div class="divprincipal" >
-      <div class="w-100" nz-row [nzGutter]="[8,8]" >
+</div>
 
-        <div nz-col [nzXs]="24"	[nzSm]="12" [nzMd]="8" [nzLg]="8">
+<div class="divprincipal" >
+  <div class="w-100" nz-row [nzGutter]="[8,8]" >
 
-          <nz-card nzTitle="Historial de Pagos">
-            <a routerLink="../admin/paymenthistory">
-              <span nz-icon nzType="wallet" nzTheme="outline" class="ant-icon">
+    <div nz-col [nzXs]="24"	[nzSm]="12" [nzMd]="8" [nzLg]="8">
 
-              </span>
-            </a>
-          </nz-card>
-        </div>
-        <div nz-col [nzXs]="24" [nzSm]="12" [nzMd]="8"	[nzLg]="8">
-          <nz-card nzBackground="'lightblue'" nzTitle="Configuración" >
-            <a routerLink="../admin/settings">
+      <nz-card nzTitle="Templates">
+        <a routerLink="../admin/paymenthistory">
+          <span nz-icon nzType="wallet" nzTheme="outline" class="ant-icon">
 
-              <span nz-icon nzType="setting" nzTheme="outline" nzSize="large" class="ant-icon">
-
-              </span>
-
-            </a>
-          </nz-card>
-        </div>
-        <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="8" [nzLg]="8">
-          <nz-card nzTitle="Cancelar suscripción">
-            <a routerLink="../admin/cancelsuscription">
-              <span nz-icon nzType="user-delete" nzTheme="outline" class="ant-icon">
-              </span>
-            </a>
-          </nz-card>
-        </div>
-      </div>
+          </span>
+        </a>
+      </nz-card>
     </div>
+    <div nz-col [nzXs]="24" [nzSm]="12" [nzMd]="8"	[nzLg]="8">
+      <nz-card nzBackground="'lightblue'" nzTitle="Configuración" >
+        <a routerLink="../admin/settings">
+
+          <span nz-icon nzType="setting" nzTheme="outline" nzSize="large" class="ant-icon">
+
+          </span>
+
+        </a>
+      </nz-card>
+    </div>
+    <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="8" [nzLg]="8">
+      <nz-card nzTitle="Cancelar suscripción">
+        <a routerLink="../admin/cancelsuscription">
+          <span nz-icon nzType="user-delete" nzTheme="outline" class="ant-icon">
+
+          </span>
+
+        </a>
+      </nz-card>
+    </div>
+  </div>
+</div>

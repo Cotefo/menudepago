@@ -1,0 +1,30 @@
+:host::ng-deep
+{
+
+
+  .m-input[background='primary']
+  {
+
+    border-radius: 0.4em ;
+  }
+
+  .m-input[background="secondary"]{
+
+    height: 35px;
+    width: 200px;
+  border: solid 0.5px grey;
+  border-radius: 0.4em ;
+
+  }
+
+  .m-input[background="warning"]{
+
+    width: 200px;
+    border: solid 0.5px grey;
+    border-radius: 0.4em ;
+  }
+
+
+
+
+}

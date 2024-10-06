@@ -1,4 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face{
+  font-family: 'ProximaNova-Regular';
+  src:url(/fuentes/Lato-Bold.ttf);
+  font-weight: bold;
+  font-style: bold;
+}
+input{
+  outline:none;
+}
 .w-100{
   width: 100%;
+}
+
+.w-100 span:hover{
+  transform: scale(1.5);
+}
+.text-align-center{
+  text-align: center;
+}
+
+.d-flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-grow-1{
+
+  width: 200px;
+  border: solid 0.5px grey;
+  border-radius: 0.4em ;
+
+
+}
+.invalid-type{
+
+  border: 1px solid red;
+
+}
+
+body, *{
+  font-family: var(--fontFamilyRegular);
+}
+
+.ff-normal{
+  font-family: var(--fontFamilyRegular);
+}
+
+.ff-bold, strong, b{
+  font-family: var(--fontFamilyBold);
+}
+
+.ff-light{
+  font-family: var(--fontFamilyLight);
+}
+
+.ff-black{
+  font-family: var(--fontFamilyBlack);
+}
+
+h1,h2,h3,h4,h5,p{
+  margin-bottom: 0;
 }

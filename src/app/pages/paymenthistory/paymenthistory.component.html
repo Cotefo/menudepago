@@ -1,42 +1,36 @@
-<div class="body">
+<h1>Botones</h1>
+<app-button  [background]="'primary'" >PRIMARY</app-button>&nbsp;
+<app-button  [background]="'secondary'" >SECONDARY</app-button>&nbsp;
+<app-button  [background]="'warning'" >WARNING</app-button>&nbsp;
+<app-button  [background]="'success'" >SUCCESS</app-button>
+<br>
+<br>
+<h1>Inputs</h1>
+<br>
+Input1
+<app-input [background]="'primary'">
+</app-input>
+Input2
+<app-input [background]="'secondary'">
+</app-input>
+Input3
+<app-input [background]="'warning'">
+</app-input>
+<br>
+<br>
+<h1>Header</h1>
+<br>
+<app-header>
+  <div class="header-logo">
+      <img class="header-logo-img" src="./../../../../assets/resources/logo/simplehc-logo.png"/>
+      <div class="header-logo-title">
+          <h3><strong>SimpleHC</strong></h3>
+          <p>License admin</p>
+      </div>
+  </div>
 
-  <form nz-form class="formulario">
-    <div nz-col [nzXs]="24" class="title-header">
-      <h1>Registro de Usuario</h1>
-    </div>
-    <br>
-
-
-    <nz-form-item>
-      <nz-form-label [nzSpan]="12" nzFor="email">Nombre</nz-form-label>
-          <nz-form-control [nzSpan]="12">
-              <input nz-input name="email" type="email" id="email" />
-          </nz-form-control>
-   </nz-form-item>
-
-       <nz-form-item>
-        <nz-form-label [nzSpan]="12" nzFor="email">Apellido</nz-form-label>
-          <nz-form-control [nzSpan]="12">
-              <input nz-input name="email" type="email" id="email" />
-        </nz-form-control>
-      </nz-form-item>
-
-    <nz-form-item>
-      <nz-form-label [nzSpan]="12" nzFor="email">Direccion</nz-form-label>
-        <nz-form-control [nzSpan]="12">
-            <input nz-input name="email" type="email" id="email" />
-      </nz-form-control>
-    </nz-form-item>
-    <nz-form-item>
-      <nz-form-label [nzSpan]="12" nzFor="email">E-mail</nz-form-label>
-        <nz-form-control [nzSpan]="12">
-            <input nz-input name="email" type="email" id="email" />
-      </nz-form-control>
-    </nz-form-item>
-    <div  nz-col [nzXs]="24" [nzSm]="24" [nzMd]="24"	[nzLg]="24">
-      <button class="button"  nz-button nzType="primary">Guardar</button>
-    </div>
-
-  </form>
-
-</div>
+  <div class="header-actions">
+    <app-button  [background]="'primary'" >Atrás</app-button>
+  </div>
+</app-header>
+<br>

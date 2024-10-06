@@ -1,40 +1,33 @@
 <div class="body">
 
-  <form nz-form class="formulario">
+  <form nz-row [nzJustify]="'center'" [nzGutter]="[0,12]"  class="formulario">
     <div nz-col [nzXs]="24" class="title-header">
-      <h1>Registro de Usuario</h1>
+      <h1 class="text-align-center">Registro de Usuario</h1>
     </div>
     <br>
+    <div nz-col [nzXs]="24" class="d-flex" >
+      <label class="label-w"> Nombre</label>
+      <input name="email" type="email" id="email" class="flex-grow-1"/>
 
+    </div>
+    <div nz-col [nzXs]="24"  class="d-flex">
+      <label class="label-w"> Apellido</label>
+          <input name="email" type="email" id="email" class="flex-grow-1"/>
 
-    <nz-form-item>
-      <nz-form-label [nzSpan]="12" nzFor="email">Nombre</nz-form-label>
-          <nz-form-control [nzSpan]="12">
-              <input nz-input name="email" type="email" id="email" />
-          </nz-form-control>
-   </nz-form-item>
+    </div>
+    <div nz-col [nzXs]="24"  class="d-flex">
+      <label class="label-w"> Dirección</label>
+      <input name="email" type="email" id="email" class="flex-grow-1"/>
 
-       <nz-form-item>
-        <nz-form-label [nzSpan]="12" nzFor="email">Apellido</nz-form-label>
-          <nz-form-control [nzSpan]="12">
-              <input nz-input name="email" type="email" id="email" />
-        </nz-form-control>
-      </nz-form-item>
+    </div>
+    <div nz-col [nzXs]="24"  class="d-flex">
+      <label class="label-w"> E-mail</label>
+          <input name="email" type="email" id="email" class="flex-grow-1 "/>
 
-    <nz-form-item>
-      <nz-form-label [nzSpan]="12" nzFor="email">Direccion</nz-form-label>
-        <nz-form-control [nzSpan]="12">
-            <input nz-input name="email" type="email" id="email" />
-      </nz-form-control>
-    </nz-form-item>
-    <nz-form-item>
-      <nz-form-label [nzSpan]="12" nzFor="email">E-mail</nz-form-label>
-        <nz-form-control [nzSpan]="12">
-            <input nz-input name="email" type="email" id="email" />
-      </nz-form-control>
-    </nz-form-item>
-    <div  nz-col [nzXs]="24" [nzSm]="24" [nzMd]="24"	[nzLg]="24">
-      <button class="button"  nz-button nzType="primary">Guardar</button>
+    </div>
+
+    <div    nz-col [nzXs]="24" [nzSm]="24" [nzMd]="24"	[nzLg]="24">
+      <button  nz-button class="button" nzType="primary">Guardar</button>
     </div>
 
   </form>

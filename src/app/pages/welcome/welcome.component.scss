@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color:violet;
 }
 
 .divprincipal{
@@ -16,6 +17,9 @@ display:flex;
 align-items: center;
 justify-content:center;
 }
+._ngcontent-ng-c93459339 a:hover{
+  background-color: black;
+  }
 
 :host::ng-deep
 {
@@ -24,5 +28,69 @@ justify-content:center;
       text-align: center;
   }
 
+
+}
+.content{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  }
+  .body{
+  flex-grow: 1;
+  }
+
+  .formulario{
+
+    width: 400px; /* Ajusta el ancho según tu diseño */
+    padding-top: 10rem;
+    height: 100%;
+    align-items: center;
+
+
+  }
+
+
+    header{
+        width: 100%;
+        height: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+
+  .logo{
+  width: 70px;
+  height: 60px;
+  padding-left: 0.5rem;
+  margin-top: 2rem;
+
+  }
+  .title-header{
+
+  text-align: center;
+  }
+
+  .button{
+  width: 100%;
+  }
+header button{
+  background-color: violet;
+  color: white;
+  border: violet;
+}
+header button:hover{
+background-color:black;
+border: black;
+}
+.w-100 nz-card:hover{
+
+  border: solid 0.3px violet;
 
 }
